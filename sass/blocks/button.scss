@@ -1,0 +1,98 @@
+.button {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  padding: 0;
+
+  color: white;
+  font-family: $main-font__regular;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  background-color: $color-blue;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $button-hover;
+  }
+
+  &:hover svg {
+    fill: rgba(white, 0.3);
+  }
+
+  &:active {
+    background-color: $button-active;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: $button-disabled;
+  }
+
+  &--search-info {
+    @include bold();
+    margin: 0 auto;
+    padding: 16px;
+    width: 280px;
+  }
+
+  &--survey-form {
+    padding: 16px;
+    min-height: 58px;
+    width: 280px;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+  }
+
+  &--popup-failure {
+    margin: 0 auto;
+    padding: 16px;
+    width: 180px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  &--popup-success {
+    margin: 0 auto;
+    padding: 16px;
+    width: 280px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    &--search-info {
+      width: 458px;
+    }
+
+    &--survey-form {
+      padding-top: 15px;
+      padding-left: 2px;
+      align-self: flex-start;
+    }
+
+    &--popup-failure {
+      font-size: 21px;
+      line-height: 26px;
+      width: 272px;
+    }
+
+    &--popup-success {
+      font-size: 21px;
+      line-height: 26px;
+      width: 458px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    &--survey-form {
+      padding-left: 15px;
+    }
+  }
+}

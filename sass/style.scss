@@ -1,0 +1,30 @@
+@import "variables";
+@import "mixins";
+/*fonts*/
+@import "global/fonts";
+/*глобальные стили*/
+@import "global/layout";
+@import "blocks/wrapper";
+@import "blocks/button";
+@import "blocks/like";
+/*header*/
+@import "blocks/main-header";
+@import "blocks/main-nav";
+/*main*/
+@import "blocks/page-main";
+@import "blocks/visually-hidden";
+@import "blocks/promo";
+/*index*/
+@import "blocks/features";
+@import "blocks/search-info";
+@import "blocks/map";
+/*photo*/
+@import "blocks/gallery.scss";
+@import "blocks/video";
+/*form*/
+@import "blocks/review";
+@import "blocks/survey-form";
+@import "blocks/popup";
+/*footer*/
+@import "blocks/footer";
+@import "blocks/social";

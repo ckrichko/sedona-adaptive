@@ -1,0 +1,62 @@
+{
+  "name": "sedona",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Личный проект «Седона» от HTML Academy",
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
+    "autoprefixer": "^7.1.5",
+    "browser-sync": "2.18.13",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-jsbeautifier": "^2.1.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-posthtml": "^3.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-svgstore": "^6.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-webp": "^2.3.0",
+    "posthtml-include": "^1.1.0",
+    "run-sequence": "^2.2.0",
+    "stylelint": "^8.2.0",
+    "stylelint-config-htmlacademy": "^0.1.0"
+  },
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint 'sass/**/*.scss' --syntax scss",
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "gulp build",
+    "images": "gulp images",
+    "webp": "gulp webp",
+    "sprite": "gulp sprite",
+    "start": "npm run build && gulp serve"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "editorconfig-cli": [
+    "*.html",
+    "*.json",
+    "*.js",
+    "js/**/*.js",
+    "img/**/*.svg",
+    "sass/**/*.{sass,scss}"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Generinox/Sedona-adaptive.git"
+  },
+  "author": "Konstantin Krichko",
+  "license": "ISC",
+  "engines": {
+    "node": "8.5.0"
+  },
+  "dependencies": {}
+}

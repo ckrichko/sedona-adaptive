@@ -1,0 +1,280 @@
+.video {
+  padding-bottom: 38px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-top: 1px solid $color-gray;
+}
+
+.video__text-block {
+  padding-top: 16px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 17px;
+
+  min-height: 193px;
+  max-width: 320px;
+}
+
+.video__title {
+  margin: 0;
+  padding: 0;
+  margin-top: 15px;
+  margin-bottom: 27px;
+
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+
+  background-color: $background-color__main;
+}
+
+.video__phrase {
+  font-size: 14px;
+  line-height: 24px;
+  background-color: $background-color__main;
+  text-align: center;
+}
+
+.video__content {
+  min-height: 267px;
+}
+
+.video__image {
+  width: 320px;
+  height: 201px;
+
+  background-color: #8f8269;
+  background-image: url("../img/video-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  vertical-align: top;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/video-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
+}
+
+.video__controls {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-left: 24px;
+  padding-right: 22px;
+  padding-bottom: 23px;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: row;
+  width: 280px;
+  min-width: 0;
+  height: 66px;
+
+  font-size: 0;
+  background-color: #f2f2f2;
+}
+
+.video__scale-wrapper {
+  position: absolute;
+  top: -45px;
+  left: 0;
+  padding: 0 22px;
+
+  width: 100%;
+  min-height: 45px;
+  background-color: rgba(black, 0.6);
+}
+
+.video__toggle {
+  cursor: pointer;
+  padding: 22px 0 20px;
+
+  &:hover {
+    .video__bar::after {
+      animation: pulse 1.3s infinite;
+    }
+  }
+}
+
+.video__scale {
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.video__bar {
+  position: relative;
+  height: 2px;
+  width: 40px;
+
+  &::after {
+    position: absolute;
+    right: -5px;
+    top: -3px;
+
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: white;
+  }
+}
+
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 2px transparent;
+  }
+
+  50% {
+    box-shadow: 0 0 10px white;
+  }
+
+  to {
+    box-shadow: 0 0 2px transparent;
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.video__button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  vertical-align: top;
+  fill: #5c6870;
+
+  &:hover {
+    fill: #333333;
+    animation: opacity 1.3s infinite;
+  }
+
+  &:active {
+    opacity: 0.3;
+    fill: #333333;
+  }
+}
+
+.video__replay {
+  margin-right: auto;
+}
+
+.video__subtitle {
+  margin-right: 31px;
+}
+
+@media (min-width: $tablet-width) {
+  .video {
+    min-height: 540px;
+    border-top: none;
+    padding-bottom: 40px;
+  }
+
+  .video__content {
+    position: relative;
+  }
+
+  .video__text-block {
+    min-height: 244px;
+    max-width: 490px;
+  }
+
+  .video__title {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding-right: 2px;
+
+    font-size: 30px;
+    line-height: 26px;
+    font-weight: 700;
+  }
+
+  .video__image {
+    width: 648px;
+    height: 499px;
+    background-image: url("../img/video-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/video-tablet@2x.jpg");
+      background-size: 648px auto;
+    }
+  }
+
+  .video__controls {
+    position: absolute;
+    padding-left: 34px;
+    padding-right: 42px;
+    bottom: 0;
+    left: 0;
+
+    min-height: 93px;
+    width: 100%;
+    background-color: rgba(black, 0.6);
+  }
+
+  .video__scale-wrapper {
+    position: static;
+    padding: 0;
+    padding-top: 3px;
+    width: 390px;
+    background-color: transparent;
+  }
+
+  .video__bar {
+    width: 116px;
+  }
+
+  .video__button {
+    fill: white;
+  }
+
+  .video__subtitle {
+    margin-left: 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .video {
+    padding-bottom: 85px;
+  }
+
+  .video__text-block {
+    min-height: 246px;
+  }
+
+  .video__title {
+    margin-top: 55px;
+    margin-bottom: 30px;
+  }
+
+  .video__image {
+    width: 800px;
+    height: 500px;
+    background-image: url("../img/video-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/video-desktop@2x.jpg");
+      background-size: 800px auto;
+    }
+  }
+
+  .video__scale-wrapper {
+    padding-top: 3px;
+    width: 543px;
+  }
+}

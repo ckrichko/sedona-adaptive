@@ -1,0 +1,125 @@
+.popup {
+  position: absolute;
+  left: calc(50% - 160px);
+  z-index: 100;
+  padding-top: 42px;
+  padding-left: 55px;
+  padding-right: 55px;
+  padding-bottom: 20px;
+
+  width: 320px;
+
+  background-color: $background-color__main;
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+
+  &--failure {
+    bottom: 492px;
+    display: none;
+    min-height: 280px;
+
+    .popup__title {
+      margin-bottom: 28px;
+    }
+
+    .popup__message {
+      margin-bottom: 21px;
+    }
+  }
+
+  &--success {
+    bottom: 106px;
+    padding: 0;
+    padding-top: 50px;
+    display: none;
+    min-height: 323px;
+
+    .popup__title {
+      margin-bottom: 27px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .popup__message {
+      margin-bottom: 33px;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+}
+
+.popup__title {
+  @include common-title();
+}
+
+.popup__message {
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.popup__bottom-part {
+  padding: 20px;
+  min-height: 98px;
+  background-color: #f2f2f2;
+}
+
+@media (min-width: $tablet-width) {
+  .popup {
+    position: absolute;
+    padding-top: 45px;
+    min-height: 347px;
+
+    &--failure {
+      bottom: 222px;
+      left: calc(50% - 400px / 2);
+      width: 400px;
+
+      .popup__title {
+        margin-top: 10px;
+        margin-bottom: 23px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      .popup__message {
+        margin-bottom: 33px;
+      }
+    }
+
+    &--success {
+      left: calc(50% - 640px / 2);
+      width: 640px;
+      padding-top: 30px;
+      bottom: 386px;
+
+      .popup__title {
+        margin-top: 28px;
+        margin-bottom: 23px;
+      }
+
+      .popup__message {
+        margin-bottom: 0;
+        padding-bottom: 32px;
+      }
+    }
+  }
+
+  .popup__title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .popup__bottom-part {
+    padding-top: 44px;
+    padding-bottom: 44px;
+    min-height: 146px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .popup {
+    &--failure {
+      bottom: 110px;
+    }
+  }
+}

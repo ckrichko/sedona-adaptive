@@ -1,0 +1,48 @@
+@mixin list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin container() {
+  width: 320px;
+  margin: 0 auto;
+
+  @media ($tablet-width) {
+    width: 768px;
+  }
+
+  @media ($desktop-width) {
+    width: 1200px;
+  }
+}
+
+@mixin link($color: white) {
+  color: $color;
+  text-decoration: none;
+}
+
+@mixin common-title() {
+  font-size: $title-font-size;
+  line-height: $title-line-height;
+  font-family: $main-font__bold;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+}
+
+@mixin common-font-inherit() {
+  font-family: $main-font__regular;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+@mixin bold() {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  font-family: $main-font__bold;
+  text-align: center;
+}

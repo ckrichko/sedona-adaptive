@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона - форма опроса</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script>
+      document.createElement("picture");
+    </script>
+    <script src="js/picturefill.min.js" async></script>
+  </head>
+
+  <body>
+
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
+    <div class="wrapper">
+
+      <header class="main-header">
+
+        <div class="main-header__logo">
+          <a class="main-header__logo-link" href="index.html">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg"/>
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg"/>
+              <img class="main-header__logo-img"
+                src="img/logo-sedona-mobile.svg"
+                width="102"
+                height="83"
+                alt="City of Sedona">
+            </picture>
+          </a>
+        </div>
+        <nav class="main-nav main-nav--opened main-nav__nojs">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="photo.html">Фото и видео</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--active">Форма отзыва</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link  main-nav__link--shaded"
+                href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
+
+      </header>
+
+      <main class="page-main">
+        <div class="promo promo--small">
+          <svg class="promo__image promo__image--small" width="229" height="39">
+            <use xlink:href="#text-sedona"></use>
+          </svg>
+        </div>
+
+        <section class="review">
+          <div class="review__text-block">
+            <h1 class="review__title">Оставьте свой отзыв</h1>
+            <p class="review__phrase">
+              Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных
+              вами достопримечательностях</p>
+          </div>
+          <form class="survey-form" action="https://echo.htmlacademy.ru" method="post">
+            <section class="survey-form__item  survey-form__person">
+              <h2 class="survey-form__title">Представьтесь:</h2>
+              <p class="survey-form__text">
+                <label class="survey-form__label" for="yourname">имя*:</label>
+                <input class="survey-form__input" type="text" id="yourname" name="yourname" placeholder="Петр" required>
+              </p>
+              <p class="survey-form__text">
+                <label class="survey-form__label" for="family">фамилия*:</label>
+                <input class="survey-form__input" type="text" id="family" name="family" placeholder="Иванов" required>
+              </p>
+              <p class="survey-form__text">
+                <label class="survey-form__label" for="patronymic">отчество:</label>
+                <input class="survey-form__input" type="text" id="patronymic" name="patronymic"
+                  placeholder="Александрович">
+              </p>
+            </section>
+            <section class="survey-form__item  survey-form__contact">
+              <h2 class="survey-form__title">Контактная информация:</h2>
+              <div class="survey-form__item-container">
+                <div class="survey-form__text">
+                  <label class="survey-form__label" for="phone">
+                    <span class="survey-form__contact-tel">Контактный </span>
+                    <span class="survey-form__tel">телефон*: </span>
+                  </label>
+                  <div class="survey-form__input-wrapper  survey-form__input-wrapper--phone">
+                    <input class="survey-form__input" type="tel" id="phone" name="phone"
+                      placeholder="Введите телефон" required>
+                  </div>
+                </div>
+                <div class="survey-form__text">
+                  <label class="survey-form__label" for="email">электронная почта*:</label>
+                  <div class="survey-form__input-wrapper  survey-form__input-wrapper--email">
+                    <input class="survey-form__input" type="email" id="email" name="email"
+                      placeholder="Введите e-mail">
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="survey-form__item  survey-form__impression">
+              <h2 class="survey-form__title">Ваше общее впечатление:</h2>
+              <p class="survey-form__text">
+                <input class="survey-form__input" type="radio" name="impression-select"
+                  id="positive" checked>
+                <label class="survey-form__label  survey-form__label--radio" for="positive">Скорее положительное</label>
+              </p>
+              <p class="survey-form__text">
+                <input class="survey-form__input" type="radio" name="impression-select" id="negative">
+                <label class="survey-form__label  survey-form__label--radio" for="negative">Скорее отрицательное</label>
+              </p>
+              <p class="survey-form__text">
+                <input class="survey-form__input" type="radio" name="impression-select" id="difficult">
+                <label class="survey-form__label  survey-form__label--radio" for="difficult">Затрудняюсь
+                  ответить</label>
+              </p>
+            </section>
+            <section class="survey-form__item  survey-form__sights">
+              <h2 class="survey-form__title">Посещенные достопримечательности:</h2>
+              <div class="survey-form__item-container">
+                <p class="survey-form__text">
+                  <input class="survey-form__input" type="checkbox" id="Devils_Bridge" checked>
+                  <label class="survey-form__label  survey-form__label--checkbox" for="Devils_Bridge">Мост
+                    Дьявола</label>
+                </p>
+                <p class="survey-form__text">
+                  <input class="survey-form__input" type="checkbox" id="Slide-park" checked>
+                  <label class="survey-form__label  survey-form__label--checkbox" for="Slide-park">Слайд-парк</label>
+                </p>
+                <p class="survey-form__text">
+                  <input class="survey-form__input" type="checkbox" id="Mountain-Bell">
+                  <label class="survey-form__label survey-form__label--checkbox"
+                    for="Mountain-Bell">Гора-Колокол</label>
+                </p>
+                <p class="survey-form__text">
+                  <input class="survey-form__input" type="checkbox" id="Red-rocks" checked>
+                  <label class="survey-form__label survey-form__label--checkbox" for="Red-rocks">Красные скалы</label>
+                </p>
+              </div>
+            </section>
+            <fieldset class="survey-form__item  survey-form__emotions">
+              <h2 class="survey-form__title">Опишите свои эмоции:</h2>
+              <p class="survey-form__message">
+              <textarea class="survey-form__input" name="message" id="text-message" rows="4"
+                placeholder="Опишите подробно все свои восторги"></textarea>
+              </p>
+            </fieldset>
+            <button class="survey-form__button  button--survey-form  button" type="submit">Отправить отзыв</button>
+            <p class="survey-form__note">* &ndash; обязательные поля</p>
+          </form>
+          <div class="popup popup--failure">
+            <p class="popup__title">Что-то пошло не так!</p>
+            <p class="popup__message">
+              Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+            <button class="button button--popup-failure" type="button">Ок</button>
+          </div>
+          <div class="popup popup--success">
+            <p class="popup__title">Ваш отзыв отправлен!</p>
+            <p class="popup__message">
+              Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>
+              В ближайшее время мы опубликуем его на сайте.</p>
+            <div class="popup__bottom-part">
+              <button class="button button--popup-success" type="button">Закрыть окно</button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <a class="footer__visitsedona" href="#">#visitsedona</a>
+        <section class="footer__social  social">
+          <h2 class="visually-hidden">Найдите нас в соцсетях:</h2>
+          <a class="social__button  button"
+            href="https://twitter.com/htmlacademy_ru?lang=ru">
+            <span class="visually-hidden">Мы в Твиттере</span>
+            <svg class="social__icon  social__icon--twitter" width="18" height="14">
+              <use xlink:href="#icon-twitter"></use>
+            </svg>
+          </a>
+          <a class="social__button  button"
+            href="https://www.facebook.com/htmlacademy">
+            <span class="visually-hidden">Мы в Фейсбуке</span>
+            <svg class="social__icon  social__icon--facebook" width="9" height="18">
+              <use xlink:href="#icon-facebook"></use>
+            </svg>
+          </a>
+          <a class="social__button  button"
+            href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">Мы в Ютубе</span>
+            <svg class="social__icon  social__icon--youtube" width="20" height="14">
+              <use xlink:href="#icon-youtube"></use>
+            </svg>
+          </a>
+        </section>
+        <p class="footer__copyright">
+          <span class="footer__by">Разработано</span><a class="footer__copyright-link"
+          href="https://htmlacademy.ru/intensive/adaptive">html academy
+          <svg width="27" height="34">
+            <use xlink:href="#logo-htmlacademy"></use>
+          </svg>
+        </a>
+        </p>
+      </footer>
+    </div>
+    <script src="js/scripts.min.js"></script>
+  </body>
+</html>

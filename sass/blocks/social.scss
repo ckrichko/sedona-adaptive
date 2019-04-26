@@ -1,0 +1,38 @@
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__button {
+  margin-right: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 48px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__icon {
+  fill: white;
+
+  &--twitter {
+    width: 18px;
+    height: 14px;
+  }
+
+  &--facebook {
+    width: 8px;
+    height: 18px;
+  }
+
+  &--youtube {
+    width: 20px;
+    height: 14px;
+  }
+}
